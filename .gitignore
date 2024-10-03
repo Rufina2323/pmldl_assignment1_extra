@@ -1,0 +1,4 @@
+.mypy_cache/
+__pycache__/
+services/airflow/logs/*
+.DS_Store
