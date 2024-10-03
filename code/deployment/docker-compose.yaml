@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    build: api
+    volumes:
+      - ../../models:/app/models
+
+  app:
+    build: app
+    ports:
+      - 8501:8501
+    environment:
+      - ENDPOINT_URL=http://api:8000/inference
