@@ -11,7 +11,6 @@ from callables.start_services_callable import start_services_callable
 default_args = {
  'owner': 'your_name',
  'start_date': datetime(2024, 10, 1),
-#  'start_date': datetime.now() + timedelta(minutes=1),
  'retries': 1,
 }
 
@@ -22,10 +21,6 @@ dag = DAG(
     schedule_interval='*/5 * * * *',
     catchup=False,
 )
-
-
-def kek():
-    print("kek")
 
 
 data_engineering_task = PythonOperator(
